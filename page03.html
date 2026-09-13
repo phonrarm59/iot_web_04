@@ -118,14 +118,16 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
-            margin-left: 260px;
+            margin-left: 230px;
         }
         #text{
+            margin-right: 230px;
             font-family: 'Anuphan';
             font-size: 30px;
             color: white;
         }
         #text2{
+            margin-right: 230px;
             font-family: 'Anuphan';
             font-size: 20px;
             color: white;
@@ -157,16 +159,66 @@
             color: rgba(142, 142, 255, 0.5);
         }
         .h-imge2{
-            max-width: 1200px;
-            margin: 10px auto 0;
-            padding: 0 20px; /
+            margin-left: 230px;
+            padding: 0 20px; 
         }
         .h-imge2 img{
-             width: 1200px;
+            margin-left: 230px;
+            width: 1400px;
             height: 600px;
             border-radius: 100px;
             margin: 10px auto 0;
             padding: 0 20px;
+        }
+        .experience-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .section-title {
+            margin-left: 230px;
+            font-family: 'Audiowide';
+            font-size: 60px;
+            font-weight: bold;
+            white-space: nowrap;
+   
+        }
+
+        .col-right2 {
+            margin-top: 60px;
+            margin-right: 230px;
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+        .exp-header {
+            font-family: 'Audiowide';
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .exp-header h3 {
+            font-family: 'Audiowide';
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .exp-date {
+            color: #bdc0cc;
+            font-size: 16px;
+        }
+
+        .exp-desc {
+            color: #ffffff;
+            font-family: 'Anuphan';
+            margin: 0;
+            font-size: 15px;
         }
 
     </style>
@@ -223,7 +275,45 @@
     </div>
     <div class = "h-imge2">
                 <img src="./images/person3.png" alt="">
+    </div>
+
+    <div class="container3">
+        <div class="experience-section">
+    <!-- คอลัมน์ซ้าย -->
+    <div class="col-left">
+        <h2 class="section-title">MY EXPERIENCE</h2>
+    </div>
+    
+    <!-- คอลัมน์ขวา -->
+    <div class="col-right2">
+        
+        <!-- ประสบการณ์ที่ 1 -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Freelance Developer</h3>
+                <span class="exp-date">Nov 2023 — Present</span>
+            </div>
+            <p class="exp-desc">
+                พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้ React.js ทำงานร่วมกับทีมออกแบบ UX/UI เพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจ ปรับปรุงความเร็วในการโหลดเว็บไซต์ด้วยเทคนิคการเพิ่มประสิทธิภาพต่างๆ ร่วมพัฒนาและดูแลไลบรารีคอมโพเนนต์ภายในองค์กร
+            </p>
         </div>
+
+        <!-- ประสบการณ์ที่ 2 -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Front-End Intern</h3>
+                <span class="exp-date">Sep 2023 — Nov 2023</span>
+            </div>
+            <p class="exp-desc">
+                พัฒนาเว็บไซต์ลูกค้าโดยใช้ HTML, CSS และ JavaScript
+                ช่วยปรับปรุงการเข้าถึง (Accessibility) ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG
+                ทำงานร่วมกับทีมแบ็คเอนด์เพื่อเชื่อมต่อ API
+            </p>
+        </div>
+
+    </div>
+</div>
+    </div>
 
 </div>
 </body>
