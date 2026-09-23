@@ -1,11 +1,595 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    page04
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lugrasimo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* หน้า1 */
+      .container {
+        background-image: url(./images/body.png);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0%;
+        margin: -8px;
+      }
+      .top-bar {
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        padding: 30px 80px;
+      }
+      .top-bar .image img {
+        width: 200px;
+        height: 200px;
+      }
+      .buttonA a {
+        text-align: center;
+        font-family: "Audiowide";
+        font-size: 30px;
+        color: #6c2c10;
+        text-decoration: none;
+        margin: 0px 30px;
+        text-shadow: 2px 2px 4px #000000;
+      }
+      .buttonA a:hover {
+        color: #ffffff;
+      }
+      .buttonA #home {
+        color: #ffffff;
+      }
+      .buttonA #home:hover {
+        color: #6c2c10;
+      }
+      .text-ar {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 30px 100px;
+        margin-top: 60px;
+      }
+      #top {
+        font-family: "Audiowide";
+        font-size: 30px;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px #000000;
+      }
+      #bottom {
+        font-family: "Audiowide";
+        font-size: 60px;
+        color: #6c2c10;
+        text-shadow: 2px 2px 5px #000000;
+      }
+      .button {
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        padding: 30px 100px;
+        margin-top: 90px;
+      }
+      .button button {
+        font-family: "Audiowide";
+        font-size: 40px;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px #000000;
+        background-color: #6c2c10;
+        border: none;
+        border-radius: 15px;
+        padding: 15px 30px;
+        cursor: pointer;
+      }
+      .button a {
+        text-align: center;
+        font-family: "Audiowide";
+        font-size: 40px;
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0px 30px;
+        text-shadow: 2px 2px 20px #000000;
+      }
+      .button a:hover {
+        color: #6c2c10;
+      }
+      .button button:hover {
+        background-color: #ffffff;
+        color: #6c2c10;
+      }
+      /* หน้า1 */
+
+      /* หน้า2 */
+      .products-section {
+        width: 1500px;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: #ffffff;
+      }
+      .products-section h1 {
+        font-family: "Audiowide";
+        text-align: center;
+        font-size: 70px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 90px;
+        margin-top: 100px;
+      }
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+      .product-card {
+        position: relative;
+        height: 380px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #222;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 50%);
+      }
+      .product-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .product-info {
+        font-family: "Audiowide";
+        position: absolute;
+        margin-right: 250px;
+        inset: 0;
+        padding: 250px 20px 18px;
+        color: rgb(255, 255, 255);
+        text-shadow: #000000 2px 2px 4px;
+      }
+      .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .price {
+        font-size: 30px;
+        font-weight: 500;
+        color: #ffffff;
+        text-shadow: #000000 2px 2px 4px;
+      }
+      .info-btn {
+        width: 27px;
+        height: 27px;
+        border: 1px solid white;
+        border-radius: 50%;
+        background: transparent;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .bottom-row {
+        display: flex;
+        margin-top: 17px;
+        gap: 30px;
+      }
+
+      .product-name {
+        font-size: 17px;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+      .add-btn {
+        border: none;
+        background: #a83f25;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .add-btn:hover {
+        background: #c05235;
+        transform: translateY(-2px);
+      }
+      /* หน้า2 */
+
+
+      /* หน้า3 */
+        .promo-banner {
+            background-image: url('./images/bg2.png'); 
+            background-size: cover;
+            background-position: center; 
+            width: 100%;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+        }
+
+        .promo-content {
+            text-align: center; 
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .promo-title {
+            font-family: "Audiowide";
+            color: #a34a35;
+            font-size: 50px;
+            font-style: italic;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+
+        .promo-desc {
+            font-family: "Audiowide";
+            color: #555555;
+            font-size: 20px;
+            margin: 0 0 25px 0;
+            line-height: 1.5;
+        }
+        .btn-learn-more {
+            font-family: "Audiowide";
+            display: inline-block;
+            background-color: #9d3f2b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+        font-size: 20px;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #7a3020; 
+        }
+      /* หน้า3 */
+
+
+
+      /* หน้า4 */
+        .explore-container {
+            max-width: 1500px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: white;
+        }
+        .explore-title {
+            font-family: "Audiowide";
+            text-align: center;
+            font-size: 50px;
+            font-style: italic;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 50px;
+        }
+
+        .explore-nav-wrapper {
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+        }
+
+        .explore-nav {
+            display: flex;
+            justify-content: center; 
+            gap: 30px;
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        .explore-nav a {
+            font-family: "Audiowide";
+            text-decoration: none;
+            color: #666666;
+            font-weight: bold;
+            font-size: 25px;
+            padding-bottom: 10px;
+        }
+        .explore-nav a:hover {
+            color: #333333;
+        }
+        .explore-nav a.active {
+            color: #333333;
+            border-bottom: 3px solid #a34a35;
+        }
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px;
+        }
+        .grid-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover; 
+            border-radius: 15px; 
+        }
+      /* หน้า4 */
+
+
+      /* หน้า5 */
+        .about-banner {
+            background-image: url('./images/bg3.png'); 
+            background-size: cover;
+            background-position: center; 
+            width: 100%;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+        }
+        .about-content {
+            text-align: center; 
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .about-title {
+            font-family: "Audiowide";
+            color: #ffffff;
+            font-size: 50px;
+            font-style: italic;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .about-desc {
+            font-family: "Audiowide";
+            color: #c7c7c7;
+            font-size: 20px;
+            margin: 0 0 25px 0;
+            line-height: 1.5;
+        }
+        .btn-read-more {
+            font-family: "Audiowide";
+            display: inline-block;
+            background-color: #9d3f2b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .btn-read-more:hover {
+            background-color: #7a3020;
+        }
+      /* หน้า5 */
+    </style>
+  </head>
+  <body>
+    <!-- หน้า1 -->
+    <div class="container">
+      <div class="top-bar">
+        <div class="image">
+          <img src="./images/logo.png" alt="" />
+        </div>
+        <div class="buttonA">
+          <a id="home" href="">HOME</a>
+          <a href="">BLOG</a>
+          <a href="">CONTACT US</a>
+          <a href="">SERVICES</a>
+        </div>
+      </div>
+
+      <div class="text-ar">
+        <span id="top">Delicous Cafe</span>
+        <span id="bottom"
+          >Sweet Treats <br />
+          Perfect Eats</span
+        >
+      </div>
+
+      <div class="button">
+        <button>Shop Now</button>
+        <a href="">Learn More</a>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="products-section">
+        <h1>Top Products</h1>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <img src="./images/card.png" alt="Whole Grain Bread" />
+
+            <div class="product-info">
+              <div class="top-row">
+                <span class="price">40 Baht</span>
+                <button class="info-btn">i</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="product-name">
+                  Whole Grain<br />
+                  Bread
+                </span>
+
+                <button class="add-btn">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="./images/card2.png" alt="Croissant" />
+
+            <div class="product-info">
+              <div class="top-row">
+                <span class="price">40 Baht</span>
+                <button class="info-btn">i</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="product-name">
+                  Whole Grain<br />
+                  Bread
+                </span>
+
+                <button class="add-btn">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <img src="./images/card3.png" alt="Bread" />
+
+            <div class="product-info">
+              <div class="top-row">
+                <span class="price">40 Baht</span>
+                <button class="info-btn">i</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="product-name">
+                  Whole Grain<br />
+                  Bread
+                </span>
+
+                <button class="add-btn">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <img src="./images/card4.png" alt="Bread" />
+
+            <div class="product-info">
+              <div class="top-row">
+                <span class="price">40 Baht</span>
+                <button class="info-btn">i</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="product-name">
+                  Whole Grain<br />
+                  Bread
+                </span>
+
+                <button class="add-btn">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card">
+            <img src="./images/card5.png" alt="Bread" />
+
+            <div class="product-info">
+              <div class="top-row">
+                <span class="price">40 Baht</span>
+                <button class="info-btn">i</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="product-name">
+                  Whole Grain<br />
+                  Bread
+                </span>
+
+                <button class="add-btn">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card">
+            <img src="./images/card6.png" alt="Bread" />
+
+            <div class="product-info">
+              <div class="top-row">
+                <span class="price">40 Baht</span>
+                <button class="info-btn">i</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="product-name">
+                  Whole Grain<br />
+                  Bread
+                </span>
+
+                <button class="add-btn">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="promo-banner">
+    <div class="promo-content">
+        <h2 class="promo-title">20% Off Your<br>First Order</h2>
+        <p class="promo-desc">
+            Lorem ipsum dolor sit amet<br>
+            consectetur adipisicing elit.<br>
+            Nesciunt rem.
+        </p>
+        <a href="#" class="btn-learn-more">Learn More</a>
+        </div>
+        </div>
+    </div>
+
+
+
+    <div class="explore-container">
+    <!-- ส่วนหัวข้อ -->
+    <h2 class="explore-title">Explore More</h2>
+    
+    <!-- ส่วนเมนูหมวดหมู่ -->
+    <div class="explore-nav-wrapper">
+        <ul class="explore-nav">
+            <li><a href="#" class="active">Cake</a></li>
+            <li><a href="#">Muffins</a></li>
+            <li><a href="#">Croissant</a></li>
+            <li><a href="#">Bread</a></li>
+            <li><a href="#">Tart</a></li>
+            <li><a href="#">Favorite</a></li>
+        </ul>
+    </div>
+
+    <!-- ส่วนรูปภาพแบบกริด (3x2) -->
+    <div class="explore-grid">
+        <img src="./images/cake1.png" alt="Muffins" class="grid-img">
+        <img src="./images/cake2.png" alt="Cheesecake" class="grid-img">
+        <img src="./images/cake3.png" alt="Berry Cake" class="grid-img">
+        <img src="./images/cake4.png" alt="Pound Cake" class="grid-img">
+        <img src="./images/cake5.png" alt="Chocolate Cake" class="grid-img">
+        <img src="./images/cake6.png" alt="Cupcake" class="grid-img">
+    </div>
+</div>
+
+
+    <div class="about-banner">
+    <div class="about-content">
+        <h2 class="about-title">About us</h2>
+        <p class="about-desc">
+            Lorem ipsum dolor sit amet<br>
+            consectetur adipisicing elit.<br>
+            Nesciunt rem Lorem ipsum dolor sit..
+        </p>
+        <a href="#" class="btn-read-more">Read More</a>
+        </div>
+        </div>
+    </div>
+
 </body>
 </html>
