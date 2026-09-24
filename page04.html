@@ -371,6 +371,167 @@
             background-color: #7a3020;
         }
       /* หน้า5 */
+
+      /* หน้า6 */
+        .featured-container {
+            max-width: 1500px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: white;
+        }
+      .featured-title {
+          text-align: center;
+          font-size: 70px;
+          font-family: "Audiowide";
+          font-style: italic;
+          font-weight: bold;
+          color: #1a1a1a;
+          margin-top: 150px;
+          margin-bottom: 150px;
+      }
+      .treats-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 50px;
+      }
+      .treat-img {
+          width: 100%;
+          height: 250px;
+          object-fit: contain;
+          border-radius: 8px; 
+          margin-bottom: 15px; 
+          box-shadow: 0px 4px 6px rgba(1, 1, 1, 5);
+      }
+      .treat-info {
+          font-family: "Audiowide";
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 25px;
+          font-weight: bold;
+          color: #000000;
+      }
+      /* หน้า6 */
+
+      /* หน้า7 */
+      .site-footer {
+          margin-top: 150px;
+          background-image: url('./images/bg4.png'); 
+          color: #e0e0e0;
+          padding: 50px 10%;
+          background-repeat: no-repeat; 
+          background-size: cover;
+          background-position: center;
+      }
+
+      .footer-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+      }
+
+      .logo-img {
+          height: 120px;
+      }
+
+      .footer-social {
+          font-family: "Audiowide";
+          font-size: 25px;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          color: #dfaa7b;
+          font-weight: bold;
+      }
+
+      .footer-social a {
+          color: #dfaa7b;
+          font-size: 40px;
+          text-decoration: none;
+      }
+      .footer-divider {
+          height: 1px;
+          background-color: #dfaa7b;
+          margin-bottom: 40px;
+      }
+      .footer-middle {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 40px;
+      }
+
+      .footer-col h3 {
+          font-family: "Audiowide";
+          color: #dfaa7b;
+          font-size: 40px;
+          margin-top: 0;
+          margin-bottom: 20px;
+      }
+
+      .footer-col p {
+          font-family: "Audiowide";
+          margin: 0 0 10px 0;
+          line-height: 1.6;
+          font-size: 25px;
+        }
+      .footer-links {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .footer-links li {
+          margin-bottom: 12px;
+      }
+
+      .footer-links a {
+          color: #e0e0e0;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 25px;
+          font-family: "Audiowide";
+      }
+      .news-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 20px;
+      }
+
+      .news-item img {
+          width: 90px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 4px;
+      }
+
+      .news-text {
+          display: flex;
+          flex-direction: column;
+      }
+
+      .news-date {
+          font-family: "Audiowide";
+          color: #dfaa7b;
+          font-size: 25px;
+          margin-bottom: 4px;
+      }
+
+      .news-title {
+          font-family: "Audiowide";
+          font-size: 30px;
+          color: #ffffff;
+        }
+      .footer-bottom {
+          text-align: center;
+          color: #777777;
+          font-size: 30px;
+          margin-top: 60px;
+          font-family: "Audiowide";
+      }
+      /* หน้า7 */
     </style>
   </head>
   <body>
@@ -551,10 +712,7 @@
 
 
     <div class="explore-container">
-    <!-- ส่วนหัวข้อ -->
     <h2 class="explore-title">Explore More</h2>
-    
-    <!-- ส่วนเมนูหมวดหมู่ -->
     <div class="explore-nav-wrapper">
         <ul class="explore-nav">
             <li><a href="#" class="active">Cake</a></li>
@@ -565,8 +723,6 @@
             <li><a href="#">Favorite</a></li>
         </ul>
     </div>
-
-    <!-- ส่วนรูปภาพแบบกริด (3x2) -->
     <div class="explore-grid">
         <img src="./images/cake1.png" alt="Muffins" class="grid-img">
         <img src="./images/cake2.png" alt="Cheesecake" class="grid-img">
@@ -591,5 +747,94 @@
         </div>
     </div>
 
+
+<div class="featured-container">
+    <h2 class="featured-title">Featured Treats</h2>
+    <div class="treats-grid">
+        
+        <!-- ชิ้นที่ 1 -->
+        <div class="treat-card">
+            <img src="./images/puff1.png" alt="Puff Pastry" class="treat-img">
+            <div class="treat-info">
+                <span class="treat-name">Puff Pastry</span>
+                <span class="treat-price">8 Baht</span>
+            </div>
+        </div>
+
+        <!-- ชิ้นที่ 2 -->
+        <div class="treat-card">
+            <img src="./images/donut1.png" alt="Doughnuts" class="treat-img">
+            <div class="treat-info">
+                <span class="treat-name">Doughnuts</span>
+                <span class="treat-price">8 Baht</span>
+            </div>
+        </div>
+
+        <!-- ชิ้นที่ 3 -->
+        <div class="treat-card">
+            <img src="./images/brow1.png" alt="Brownies" class="treat-img">
+            <div class="treat-info">
+                <span class="treat-name">Brownies</span>
+                <span class="treat-price">8 Baht</span>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Keithston" class="logo-img">
+        </div>
+        <div class="footer-social">
+            <span>Follow us</span>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-middle">
+        <div class="footer-col">
+            <h3>About Us</h3>
+            <p>(02) 807-4500</p>
+            <p>info@sau.ac.th</p>
+            <p>19/1 Phetkasem Road<br>Nongkham Bangkok<br>10160</p>
+        </div>
+        <div class="footer-col">
+            <h3>Explore</h3>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Recent News</h3>
+            
+            <div class="news-item">
+                <img src="./images/recent1.png" alt="News 1">
+                <div class="news-text">
+                    <span class="news-date">June 14, 2025</span>
+                    <span class="news-title">Puff pastry bliss.</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <img src="./images/recent2.png" alt="News 2">
+                <div class="news-text">
+                    <span class="news-date">June 14, 2025</span>
+                    <span class="news-title">Puff pastry bliss.</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Bake House. All rights reserved</p>
+    </div>
+</footer>
 </body>
 </html>
